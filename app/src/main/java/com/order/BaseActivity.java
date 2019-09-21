@@ -78,6 +78,27 @@ public abstract class BaseActivity extends AppCompatActivity{
         return messageBox;
     }
 
+    protected SweetAlertDialog showChoiceMessageBox(String title, String message, String confirmButtonText,String cancelButtonText, int messageType, final ConfirmListener confirmListener, final ConfirmListener cancelListener) {
+        SweetAlertDialog messageBox =  new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                .setTitleText(title)
+                .setContentText(message)
+                .setConfirmText(confirmButtonText)
+                .setCancelText(cancelButtonText)
+                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sDialog) {
+                        confirmListener.confirm(sDialog);
+                    }
+                }).setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sDialog) {
+                        cancelListener.confirm(sDialog);
+                    }
+                });
+        messageBox.show();
+        return messageBox;
+    }
+
     protected abstract int getContentView();
 
 }

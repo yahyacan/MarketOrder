@@ -11,6 +11,7 @@ import android.widget.RelativeLayout;
 import com.order.adapter.OrderAdapter;
 import com.order.api.ApiClient;
 import com.order.api.OrderApi;
+import com.order.listener.ConfirmListener;
 import com.order.listener.ItemClickListener;
 import com.order.model.Order;
 import com.order.utils.SPKeys;
@@ -21,6 +22,7 @@ import java.util.Comparator;
 import java.util.List;
 
 import butterknife.BindView;
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -43,10 +45,24 @@ public class MainActivity extends BaseActivity {
     }
 
     public void onLogout(View v){
-        preferences.setValue(SPKeys.REMEMBER_ME,false);
-        preferences.setValue(SPKeys.USERNAME,"");
-        preferences.setValue(SPKeys.PASSWORD,"");
-        finish();
+
+        showChoiceMessageBox(getString(R.string.warning), getString(R.string.sure_logout), getString(R.string.yes), getString(R.string.no), SweetAlertDialog.WARNING_TYPE,
+                new ConfirmListener() {
+                    @Override
+                    public void confirm(SweetAlertDialog sDialog) {
+                        sDialog.dismissWithAnimation();
+                        preferences.setValue(SPKeys.REMEMBER_ME,false);
+                        preferences.setValue(SPKeys.USERNAME,"");
+                        preferences.setValue(SPKeys.PASSWORD,"");
+                        finish();
+                    }
+                },
+                new ConfirmListener() {
+                    @Override
+                    public void confirm(SweetAlertDialog sDialog) {
+                        sDialog.dismissWithAnimation();
+                    }
+                });
     }
 
     @Override
