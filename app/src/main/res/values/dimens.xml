@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="header_text_size">18sp</dimen>
+    <dimen name="order_list_date">30sp</dimen>
+    <dimen name="order_list_month">15sp</dimen>
+</resources>

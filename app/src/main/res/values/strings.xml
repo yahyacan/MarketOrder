@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">MARKETİM</string>
+
+    <string name="service_base_url">http://kariyertechchallenge.mockable.io/</string>
+
+    <string name="loading">Yükleniyor</string>
+    <string name="my_orders">Siparişlerim</string>
+    <string name="logout">Çıkış</string>
+    <string name="username">Kullanıcı Adı</string>
+    <string name="password">Şifre</string>
+    <string name="remember_me">Beni Hatırla</string>
+    <string name="login">Giriş</string>
+
+    <string name="static_username">kariyer</string>
+    <string name="static_password">2019ADev</string>
+    <string name="warning">Uyarı</string>
+    <string name="error">Hata</string>
+    <string name="ok">Tamam</string>
+    <string name="fill_password">Şifreyi giriniz!</string>
+    <string name="fill_username">Kullanıcı adını giriniz!</string>
+    <string name="wrong_username_or_password">Kullanıcı adı veya şifre hatalı!</string>
+
+    <string-array name="months">
+        <item>Ocak</item>
+        <item>Şubat</item>
+        <item>Mart</item>
+        <item>Nisan</item>
+        <item>Mayıs</item>
+        <item>Haziran</item>
+        <item>Temmuz</item>
+        <item>Ağustos</item>
+        <item>Eylül</item>
+        <item>Ekim</item>
+        <item>Kasım</item>
+        <item>Aralık</item>
+    </string-array>
+</resources>

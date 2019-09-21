@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d2111b</color>
+    <color name="colorPrimaryDark">#d2111b</color>
+    <color name="colorAccent">#d2111b</color>
+    <color name="red">#d2111b</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    <color name="card_color">#13a6f2</color>
+    <color name="text_color">#4c4c4c</color>
+
+    <color name="preparing_color">#ff8d02</color>
+    <color name="waiting_approve_color">#ed2939</color>
+    <color name="order_on_way_color">#4dae50</color>
+</resources>
