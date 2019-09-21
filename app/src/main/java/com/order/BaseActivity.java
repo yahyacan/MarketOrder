@@ -82,7 +82,7 @@ public abstract class BaseActivity extends AppCompatActivity{
         SweetAlertDialog messageBox =  new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
                 .setTitleText(title)
                 .setContentText(message)
-                .setConfirmText(confirmButtonText)
+                .setConfirmText(confirmButtonText) 
                 .setCancelText(cancelButtonText)
                 .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                     @Override
